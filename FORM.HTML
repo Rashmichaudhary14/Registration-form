@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myform{
+            display: flex;
+            flex-direction: column;
+            background-color: beige;
+            border-radius: 3px;
+            padding: 1em;
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+        }
+        .column{
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+        }
+        .input-group{
+            display: flex;
+        }
+        .input-group>label{
+            margin-right: 1em;
+            padding: .5em 0;
+        }
+        .myform input,
+        .myform select{
+            flex: 6;
+            padding: .3em;
+            margin-bottom: 1em;
+        }
+        .myform button{
+            padding: 1em;
+            background-color: gray;
+            color: white;
+            border: 1px solid chartreuse;
+        }
+        .myform fieldset{
+            border: 0;
+        }
+        .taxi>label,
+        .extras > label{
+            display: block;
+        }
+    </style>
+    <form class="myform">
+        <div class="row">
+            <div class="coloumn">
+                <div class="input-group">
+                    <label for="customer_name">Name</label>
+                    <input id="customer_name">
+                </div>
+                <div class="input-group">
+                    <label for="phone_number">Phone</label>
+                    <input type="tel" id="phone_number">
+                </div>
+                <div class="input-group">
+                    <label for="email_address">Email</label>
+                    <input type="email" id="email_address">
+                </div>
+                <div class="input-group">
+                    <label for="pickup_time">Pickup date/Time</label>
+                    <input type="datetime-local" id="pickuptime">
+                </div>
+                <div class="input-group">
+                    <label for="pickup_place">Pickup place</label>
+                    <select  id="pickup_place">
+                        <option value=""selected="selected">Select one</option>
+                        <option value="office">Taxi office</option>
+                        <option value="town_hall">Town hall</option>
+                        <option value="telepathy">We'll Guess</option>
+                        </select>
+                <div class="input-group">
+                    <label for="dropoff_place">Dropoff place</label>
+                    <input type="text" id="dropoff_place" list="destination">
+                    <datalist id="destination">
+                        <option value="Airport"></option>
+                        <option value="Beach"></option>
+                        <option value="Fred Flinstone's House"></option>
+                    </datalist>
+                </div>
+                </div>
+                <div class="column">
+                    <fieldset class="taxi">
+                     <legend>Which taxi do you require</legend>  
+                     <label> <input type="radio" name="taxi_car" value="car">Car</label>
+                     <label> <input type="radio" name="taxi_car" value="van">Van</label>
+                     <label> <input type="radio" name="taxi_car" value="tuktuk">Tuk Tuk</label> 
+                    </fieldset>
+                    <fieldset class="taxi">
+                        <legend>Extras</legend>  
+                        <label> <input type="checkbox" name="extras_baby" value="baby">Baby Seat</label>
+                        <label> <input type="checkbox" name="extras_wheel" value="wheel">Wheel chair Access</label>
+                        <label> <input type="checkbox" name="extras_tip" value="tip">Tip</label> 
+                       </fieldset>
+
+                </div>
+            </div>
+            <div class="row">
+                <button id="submit"> Submit Booking</button>
+            </div>
+        </div>
+    </form>
+</head>
+<body>
+    
+</body>
+</html>

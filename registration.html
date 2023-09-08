@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>
+        Form validation using HTML and JavaScript
+    </title>
+</head>
+<style>
+    body
+    {
+        
+    }
+</style>
+<script>
+    function welcome(){
+          var firstname=document.getElementById("firstname").value;
+          if(firstname.length==0){
+            alert("FirstName cannot be blank")
+          }
+          
+}
+   function yes(){
+    var Lastname=document.getElementById("lasttname").value;
+          if(Lastname.length==0){
+            alert("Lastname cannot be blank")
+          }
+ }
+</script>
+
+ 
+<body bgcolor="#03E2F4" background="./assests/image/light background.jpg">
+    <h1>REGISTRATION FORM</h1>
+    <form action ="url" method="get"></form>
+    <p>
+    <label for=" first name"> Firstname </label>
+    <input type="text" name="firstname" id="firstname" placeholder="student first name"
+         required minlenth="2" maxlength="10">
+    <br> </p>
+    <p>
+    <label for=" Last name"> Lastname </label>
+    <input type="text" name="lasttname" id="lasttname" placeholder="student last name"
+         required minlenth="2" maxlength="10">
+         <button type="button" onclick="yes();">Click</button>
+    <br> </p>
+    <p>
+    <label for=" address"> Address </label>
+    <input type="text" name="E-mail address" maxlength="100">
+    <br> </p>
+    <p>
+        <label for=" Roll Number"> Roll Number </label>
+        <input type="number" name="Roll Number" maxlength="10">
+    <br> </p>
+    <p>
+        <label for=" age"> Age</label>
+        <input type="number" name="age" maxlength="10">
+    <br> </p>
+    <p>
+    <label for="Moblie number ">Moblie Number  </label>
+    <input type="Number" name="moblie number" maxlength="100">
+    <br> </p>
+    <p>
+    <label for="DOB"> DOB </label>
+    <input type="date" name="dob">
+    <br> </p>
+    <p>
+    <label for="Course"> Subject </label>
+    <input type="checkbox" name="b1" value="Java">java <!--checkbox is rectangle is used to 
+        select a option and select all options-->
+    <input type="checkbox" name="b2" value="Mern">mern
+    <input type="checkbox" name="b3" value="Dsa">Dsa
+    <br>
+    <br> </p>
+    <p>
+        <label for="gender"> Gender </label>
+        <select type="text" value="" >
+                <option>Male</option>
+                <option>Female</option>
+       </select>
+    <br> </p>
+    <p>
+        <label for="Comment"> Comments </label>
+        <input type="text" name="comments">
+       
+   <br> </p> 
+   <p>
+    <button type="button" onclick="welcome();">Click</button>
+    <button type="reset">clear</button>
+    <button type="button">next</button>
+   </p>
+    </form>
+</body>
+</html>
